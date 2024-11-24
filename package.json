@@ -10,13 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@astrojs/check": "^0.9.4",
+=======
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/rss": "^4.0.9",
     "@astrojs/sitemap": "^3.2.1",
     "astro": "^4.16.13",
+<<<<<<< HEAD
     "astro-seo": "^0.8.4",
     "astro-seo-schema": "^4.0.3",
+=======
+    "@astrojs/check": "^0.9.4",
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
     "typescript": "^5.7.2"
   }
 }

@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
+<<<<<<< HEAD
 import { generateSchema } from '../utils/generateSchema';
 
 // Props for the blog post
@@ -35,13 +36,22 @@ const schema = generateSchema({
 
 // Debugging: Log the final schema object
 console.log("Final Schema Object:", schema);
+=======
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
 ---
 
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+<<<<<<< HEAD
 		<!-- Schema.org JSON-LD -->
 		<script type="application/ld+json" set:html={JSON.stringify(schema)}></script>
+=======
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -87,16 +97,32 @@ console.log("Final Schema Object:", schema);
 		<Header />
 		<main>
 			<article>
+<<<<<<< HEAD
 				<!-- Hero Image -->
 				<div class="hero-image">
 					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
 				</div>
 
 				<!-- Blog Content -->
+=======
+				<div class="hero-image">
+					{heroImage && <img width={1020} height={510} src={heroImage} alt="" />}
+				</div>
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
 				<div class="prose">
 					<div class="title">
 						<div class="date">
 							<FormattedDate date={pubDate} />
+<<<<<<< HEAD
+=======
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
 						</div>
 						<h1>{title}</h1>
 						<hr />
@@ -107,4 +133,8 @@ console.log("Final Schema Object:", schema);
 		</main>
 		<Footer />
 	</body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
