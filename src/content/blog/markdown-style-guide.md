@@ -3,12 +3,9 @@ title: 'Markdown Style Guide'
 description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
 pubDate: 'Jun 19 2024'
 heroImage: '/blog-placeholder-1.jpg'
-<<<<<<< HEAD
 author:
   name: 'Jalen Wu'
   url: 'https://bumpxfeed.com/author/jalen-wu'
-=======
->>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
 ---
 
 Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.

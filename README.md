@@ -59,7 +59,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-<<<<<<< HEAD
 <!--
 Blog Frontmatter
 ---
@@ -119,8 +118,6 @@ videoUrl: "https://example.com/videos/suplex.mp4"
 -->
 
 
-=======
->>>>>>> 7e4f49be7851bb727bf748b03933b8683ed08e2e
 ## 👀 Want to learn more?
 
 Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
