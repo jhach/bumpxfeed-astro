@@ -1,14 +1,15 @@
 import { defineConfig } from 'astro/config';
-import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
 export default defineConfig({
-  site: 'https://bumpxfeed.com', // Replace with your actual site URL
+  site: 'https://bumpxfeed.com', // Replace with your site's canonical URL
   integrations: [
-    mdx(), 
-    sitemap({ 
-      // Optional: Customize sitemap settings here
+    sitemap({
+      entryLimit: 50000, // Set a high entry limit to reduce splitting
+      filter: (page) => {
+        console.log('Including page in sitemap:', page);
+        return true; // Include all pages in the sitemap
+      },
     }),
   ],
 });

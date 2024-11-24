@@ -1,4 +1,14 @@
-export function generateSchema({ schemaType = "BlogPosting", ...data }) {
+export function generateSchema({
+  schemaType = "BlogPosting",
+  siteUrl = "",
+  url = "",
+  ...data
+}: {
+  schemaType?: string;
+  siteUrl?: string;
+  url?: string;
+  [key: string]: any;
+}) {
   switch (schemaType) {
     case "BlogPosting":
       return {
@@ -7,17 +17,18 @@ export function generateSchema({ schemaType = "BlogPosting", ...data }) {
         headline: data.title,
         description: data.description,
         datePublished: data.publishDate,
+        dateModified: data.updatedDate,
+        image: data.heroImage,
         author: {
           "@type": "Person",
-          name: data.author.name, // Directly use author.name
-          url: data.author.url,  // Directly use author.url
+          name: data.author?.name || "Unknown Author",
+          url: data.author?.url || `${siteUrl}/author/unknown`,
         },
         mainEntityOfPage: {
           "@type": "WebPage",
-          "@id": data.url,
+          "@id": `${siteUrl}${url}`,
         },
       };
-
     default:
       console.warn(`Unsupported schema type: ${schemaType}`);
       return null;
